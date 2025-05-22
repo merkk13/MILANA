@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Послание для Миланы</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #ffe6f0;
-            color: #d6336c;
-            text-align: center;
-            padding: 100px;
-        }
+  <meta charset="UTF-8" />
+  <title>Милана, я тебя люблю</title>
+  <style>
+    /* Убираем отступы и делаем видео на весь экран */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
 
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    /* Видео на заднем фоне */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1; /* Чтобы видео было под текстом */
+      object-fit: cover;
+      filter: brightness(0.6); /* Немного затемним видео для читаемости текста */
+    }
 
-        p {
-            font-size: 24px;
-            margin-top: 0;
-        }
-    </style>
+    /* Текст по центру */
+    .content {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
+    }
+  </style>
 </head>
-
 <body>
-    <h1>МИЛАНА</h1>
-    <p>Я ТЕБЯ ЛЮБЛЮ</p>
-</body>
+  <video autoplay muted loop id="background-video">
+    <source src="milana.mp4" type="video/mp4" />
 
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <div class="content">
+    МИЛАНА, Я ТЕБЯ ЛЮБЛЮ
+  </div>
+</body>
 </html>
