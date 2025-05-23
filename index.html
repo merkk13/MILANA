@@ -5,20 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Милана, я тебя люблю</title>
   <style>
-    /* Общие стили */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
-      background: #000 url('fallback.jpg') center center / cover no-repeat;
+      background: black;
       color: white;
       text-align: center;
-      position: relative;
     }
 
-    /* Видео */
     #background-video {
       position: fixed;
       right: 0;
@@ -30,7 +27,6 @@
       filter: brightness(0.6);
     }
 
-    /* Центрированный текст */
     .content {
       position: relative;
       top: 50%;
@@ -41,18 +37,9 @@
       animation: fadeIn 3s ease-in-out;
     }
 
-    /* Анимация появления */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-60%); }
       to   { opacity: 1; transform: translateY(-50%); }
-    }
-
-    /* Адаптация под маленькие экраны */
-    @media (max-width: 600px) {
-      .content {
-        font-size: 2em;
-        padding: 0 10px;
-      }
     }
   </style>
 </head>
@@ -67,4 +54,3 @@
   </div>
 </body>
 </html>
-
